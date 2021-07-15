@@ -12,8 +12,8 @@ $city = $data['scity'];
 include 'config.php';
 $sql = "UPDATE students SET name='{$name}', age = {$age}, city= '{$city}' WHERE id = {$id}";
 if (mysqli_query($conn, $sql)) {
-    echo json_encode(array('msg' => 'Student record updated!!!', 'status' => true));
+    echo json_encode(array('msgs' => 'Student record updated!!!', 'status' => true));
 } else {
-    echo json_encode(array('msg' => 'Student record not updated!!!', 'status' => false));
+    echo json_encode(array('msgs' => 'Student record not updated!!!', 'status' => false));
 }
 ?>

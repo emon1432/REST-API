@@ -9,8 +9,8 @@ $id = $data['sid'];
 include 'config.php';
 $sql = "DELETE FROM students WHERE id = {$id}";
 if (mysqli_query($conn, $sql)) {
-    echo json_encode(array('msg' => 'Delete successfully!!!', 'status' => true));
+    echo json_encode(array('msgs' => 'Delete successfully!!!', 'status' => true));
 } else {
-    echo json_encode(array('msg' => 'Could not delete!!!', 'status' => false));
+    echo json_encode(array('msgs' => 'Could not delete!!!', 'status' => false));
 }
 ?>

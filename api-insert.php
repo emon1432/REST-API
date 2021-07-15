@@ -12,9 +12,9 @@ $city = $data['scity'];
 include 'config.php';
 $sql = "INSERT INTO students(name,age,city) VALUES('{$name}',{$age},'{$city}')";
 if (mysqli_query($conn, $sql)) {
-    echo json_encode(array('msg'=>'Student record inserted!!!' ,'status'=>true));
+    echo json_encode(array('msgs'=>'Student record inserted!!!' ,'status'=>true));
     
 } else {
-    echo json_encode(array('msg'=>'Student record not inserted!!!' ,'status'=>false));
+    echo json_encode(array('msgs'=>'Student record not inserted!!!' ,'status'=>false));
 }
 ?>
